@@ -1,0 +1,189 @@
+.options-container {
+    display: none;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.buttons-container .btn {
+    margin: 5px;
+}
+
+.text-container {
+    display: none;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-size: 4vw;
+}
+
+#twelveFlowersButton {
+    margin-left: 30px;
+}
+
+.btn {
+    font-family: monospace;
+    font-size: 1.5rem;
+    transition-duration: 0.2s;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid green;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    border-radius: 14px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: black;
+    background-color: white;
+}
+
+.start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-container {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-box {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: appear 0.5s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #8B4513;
+    margin-top: 20px;
+    z-index: 1;
+    font-family: 'Inclusive Sans', sans-serif;
+    text-align: center;
+}
+
+.flower-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flower {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    position: relative;
+}
+
+.petal {
+    width: 45px;
+    height: 90px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 100%;
+}
+
+.p1 { transform: translate(-50%, -50%) rotate(0deg); }
+.p2 { transform: translate(-50%, -50%) rotate(36deg); }
+.p3 { transform: translate(-50%, -50%) rotate(72deg); }
+.p4 { transform: translate(-50%, -50%) rotate(108deg); }
+.p5 { transform: translate(-50%, -50%) rotate(144deg); }
+.p6 { transform: translate(-50%, -50%) rotate(180deg); }
+.p7 { transform: translate(-50%, -50%) rotate(216deg); }
+.p8 { transform: translate(-50%, -50%) rotate(252deg); }
+.p9 { transform: translate(-50%, -50%) rotate(288deg); }
+.p10 { transform: translate(-50%, -50%) rotate(324deg); }
+
+@keyframes fadeInPetal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutPetal {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.petal {
+    animation: fadeInPetal 0.5s ease-in-out both;
+}
